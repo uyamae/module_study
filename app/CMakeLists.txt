@@ -1,0 +1,5 @@
+file(GLOB_RECURSE sources *.cpp)
+file(GLOB_RECURSE headers *.h)
+file(GLOB_RECURSE interfaces *.ixx)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /experimental:module")
+add_executable(app ${sources} ${headers} ${interfaces})
