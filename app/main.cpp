@@ -7,6 +7,8 @@ int main()
     //mm::privateFunc(); // NG: C2039 privateFunc はmm のメンバーではない // export されていない
     //mm::publicPartitionFunc(); // NG: C2039 // モジュールパーティションがexport されていない
     //mm::privatePartitionFunc(); // NG: C2039
+    mm::publicPartialFunc3();
+    //mm::privatePartialFunc3(); // NG: C2039, C3861 識別子が見つからない
 
     return 0;
 }

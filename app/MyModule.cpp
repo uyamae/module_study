@@ -19,6 +19,8 @@ void publicFunc()
     //privatePartialFunc(); // NG: C3816 識別子が見つからない
     publicPartialFunc2(); // OK: export している
     privatePartialFunc2(); // OK: export していない
+    publicPartialFunc3();
+    //privatePartialFunc3(); // NG: C3861 識別子が見つからない
 }
 
 // モジュール外に公開しない関数

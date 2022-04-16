@@ -3,6 +3,7 @@
  * @brief プライマリーモジュールインターフェース
  */
 export module MyModule;
+export import :Partition3;
 
 namespace mm {
 

@@ -16,7 +16,13 @@ C++ のモジュールについてテストして調べるプロジェクトで�
   - MyModule のパーティション:Partition
   - import しなければMyModule.cpp からも使えない
   - main.cpp から直接インポートは出来ない
-- MyModluePart
+- MyModluePart2
   - MyModule のパーティション:Partition2
   - MyModule.cpp でインポート
-  - export していないprivatePartialFunc2() がMyModlue から利用可能担っている?
+  - export していないprivatePartialFunc2() がMyModlue から利用可能になっている?
+- MyModulePart3
+  - MyModule のパーティション:Partition3
+  - MyModule.ixx でエクスポート付きインポート
+  - MyModule.cpp でexport していないprivatePartialFunc3() は利用できない
+  - main.cpp でもprivatePartialFunc3() は利用できない
+
