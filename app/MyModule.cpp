@@ -12,6 +12,9 @@ namespace mm {
 void publicFunc()
 {
     std::cout << "publicFunc()" << std::endl;
+
+    //publicPartialFunc(); // NG: C3816 識別子が見つからない
+    //privatePartialFunc(); // NG: C3816 識別子が見つからない
 }
 
 // モジュール外に公開しない関数
