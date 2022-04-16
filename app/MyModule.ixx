@@ -4,6 +4,7 @@
  */
 export module MyModule;
 export import :Partition3;
+import :Partition4;
 
 namespace mm {
 
