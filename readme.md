@@ -36,3 +36,8 @@ C++ のモジュールについてテストして調べるプロジェクトで�
   - MyModule.cpp でインポート
   - MyModule.cpp でexport していないprivatePartialFunc4() は利用できない
   - main.cpp でもprivatePartialFunc4() は利用できない
+- MyModulePart2 ~ MyModulePart5
+  - export していない関数が、MyModule.cpp だけでimport したパーティションのものは利用できている
+- MyModulePart2 でPartition3 ~ Partition5 の関数呼び出し
+  - 何もインポートしていない
+  - 関数はどれも利用できない
