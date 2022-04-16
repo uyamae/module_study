@@ -20,4 +20,10 @@ void privateFunc2()
     std::cout << "privateFunc2()" << std::endl;
 }
 
+// モジュール実装ユニットで定義の関数
+void myModule2Func()
+{
+    std::cout << "myModule2Func()" << std::endl;
+}
+
 } // namespace mm

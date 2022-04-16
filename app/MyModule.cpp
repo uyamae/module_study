@@ -11,6 +11,9 @@ import :Partition5;
 
 namespace mm {
 
+extern void myModule2Func();
+//extern void privatePartialFunc5(); // 前方宣言があってもLNK2019 となる
+
 // モジュール外に公開する関数
 void publicFunc()
 {
@@ -26,6 +29,7 @@ void publicFunc()
     //privatePartialFunc4(); // NG: C3861 識別子が見つからない
     publicPartialFunc5();
     //privatePartialFunc5(); // NG: C3861 識別子が見つからない
+    myModule2Func(); // 前方宣言があれば呼び出し可能
 }
 
 // モジュール外に公開しない関数

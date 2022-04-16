@@ -44,3 +44,5 @@ C++ のモジュールについてテストして調べるプロジェクトで�
 - MyModule2.cpp
   - MyModule モジュールの実装ユニット
   - MyModule.ixx で宣言した関数をMyModule.cpp, MyModule2.cpp に分けて実装
+  - main.cpp から利用可能
+  - MyModule2.cpp で定義した関数をMyModule.cpp で利用する場合、MyModule.cpp で関数の前方宣言があれば可能
