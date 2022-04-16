@@ -30,3 +30,9 @@ C++ のモジュールについてテストして調べるプロジェクトで�
   - MyModule.ixx でインポート
   - MyModule.cpp でexport していないprivatePartialFunc4() は利用できない
   - main.cpp でもprivatePartialFunc4() は利用できない
+- MyModulePart5
+  - MyModule のパーティション:Partition5
+  - MyModule.ixx でエクスポート付きインポート
+  - MyModule.cpp でインポート
+  - MyModule.cpp でexport していないprivatePartialFunc4() は利用できない
+  - main.cpp でもprivatePartialFunc4() は利用できない

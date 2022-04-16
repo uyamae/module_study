@@ -7,6 +7,7 @@ module; // グローバルモジュールフラグメント
 module MyModule;
 //import MyModule:Partition2; // NG: C2143, C2059 構文エラー
 import :Partition2;
+import :Partition5;
 
 namespace mm {
 
@@ -22,7 +23,9 @@ void publicFunc()
     publicPartialFunc3();
     //privatePartialFunc3(); // NG: C3861 識別子が見つからない
     publicPartialFunc4();
-    //privatePartialFunc4(); // NG: C3861
+    //privatePartialFunc4(); // NG: C3861 識別子が見つからない
+    publicPartialFunc5();
+    //privatePartialFunc5(); // NG: C3861 識別子が見つからない
 }
 
 // モジュール外に公開しない関数
