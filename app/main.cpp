@@ -13,6 +13,8 @@ int main()
     //mm::privatePartialFunc4();
     mm::publicPartialFunc5();
     //mm::privatePartialFunc5(); // NG: C2039, C3861 識別子が見つからない
+    mm::publicFunc2();
+    //mm::privateFunc2(); // NG: C2039, C3861 識別子が見つからない
 
     return 0;
 }

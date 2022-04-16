@@ -15,4 +15,10 @@ export void publicFunc();
 /// モジュール外に公開しない関数
 void privateFunc();
 
+/// モジュール外に公開する関数
+export void publicFunc2();
+
+/// モジュール外に公開しない関数
+void privateFunc2();
+
 } // namespace mm

@@ -41,3 +41,6 @@ C++ のモジュールについてテストして調べるプロジェクトで�
 - MyModulePart2 でPartition3 ~ Partition5 の関数呼び出し
   - 何もインポートしていない
   - 関数はどれも利用できない
+- MyModule2.cpp
+  - MyModule モジュールの実装ユニット
+  - MyModule.ixx で宣言した関数をMyModule.cpp, MyModule2.cpp に分けて実装
