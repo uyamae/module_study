@@ -46,3 +46,6 @@ C++ のモジュールについてテストして調べるプロジェクトで�
   - MyModule.ixx で宣言した関数をMyModule.cpp, MyModule2.cpp に分けて実装
   - main.cpp から利用可能
   - MyModule2.cpp で定義した関数をMyModule.cpp で利用する場合、MyModule.cpp で関数の前方宣言があれば可能
+- MyModule.ixx, MyClass
+  - MyModule.ixx でエクスポート付きクラス宣言, MyModule.cpp でクラス定義
+  - MyModule2.cpp ではMyClass は未定義扱いになる

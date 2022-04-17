@@ -21,4 +21,7 @@ export void publicFunc2();
 /// モジュール外に公開しない関数
 void privateFunc2();
 
+/// モジュール外に公開するクラス宣言
+export class MyClass;
+
 } // namespace mm

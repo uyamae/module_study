@@ -38,4 +38,22 @@ void privateFunc()
     std::cout << "privateFunc()" << std::endl;
 }
 
+// モジュール外に公開するクラス宣言
+class MyClass
+{
+public:
+    MyClass()
+    {
+        std::cout << "MyClass::MyClass()" << std::endl;
+    }
+    ~MyClass()
+    {
+        std::cout << "MyClass::MyClass()" << std::endl;
+    }
+    void func()
+    {
+        std::cout << "MyClass::func()" << std::endl;
+    }
+};
+
 } // namespace mm

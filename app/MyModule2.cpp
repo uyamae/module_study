@@ -11,6 +11,8 @@ namespace mm {
 // モジュール外に公開する関数
 void publicFunc2()
 {
+    //MyClass mc; // NG: C2079 未定義のクラス
+    //mc.func();
     std::cout << "publicFunc2()" << std::endl;
 }
 
