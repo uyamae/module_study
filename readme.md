@@ -49,3 +49,7 @@ C++ のモジュールについてテストして調べるプロジェクトで�
 - MyModule.ixx, MyClass
   - MyModule.ixx でエクスポート付きクラス宣言, MyModule.cpp でクラス定義
   - MyModule2.cpp ではMyClass は未定義扱いになる
+- マクロ定義
+  - MyModule.ixx でマクロMY_MODULE_VERSION を定義
+  - MyModule.ixx からはMY_MODULE_VERSION を利用できる
+  - MyModule.cpp からはMY_MODULE_VERSION を利用できない

@@ -53,6 +53,9 @@ public:
     void func()
     {
         std::cout << "MyClass::func()" << std::endl;
+        // NG: C2065 MY_MODULE_VERSION は定義されていない識別子
+        //std::cout << "MY_MODULE_VERSION: " << MY_MODULE_VERSION << std::endl;
+        std::cout << "MY_MODULE_VERSION: " << MyModuleVersion() << std::endl;
     }
 };
 
