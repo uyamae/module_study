@@ -8,6 +8,8 @@ module MyModule;
 //import MyModule:Partition2; // NG: C2143, C2059 構文エラー
 import :Partition2;
 import :Partition5;
+import MyClass;
+import MyClass2;
 
 namespace mm {
 
@@ -30,6 +32,13 @@ void publicFunc()
     publicPartialFunc5();
     //privatePartialFunc5(); // NG: C3861 識別子が見つからない
     myModule2Func(); // 前方宣言があれば呼び出し可能
+
+    mc::MyClass c;
+    mc::MyClass2 c2;
+    c.func();
+    //c.call_func(&c2); // NG: C2664 引数をmc::MyClass2 * からmc::MyClass2 * に変換できない
+    c2.func();
+    c2.call_func(&c);
 }
 
 // モジュール外に公開しない関数

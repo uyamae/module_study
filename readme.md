@@ -53,3 +53,12 @@ C++ のモジュールについてテストして調べるプロジェクトで�
   - MyModule.ixx でマクロMY_MODULE_VERSION を定義
   - MyModule.ixx からはMY_MODULE_VERSION を利用できる
   - MyModule.cpp からはMY_MODULE_VERSION を利用できない
+
+- MyClass, MyClass2
+  - 相互参照するクラス
+  - MyClass.ixx ではMyClass2 を前方宣言, MyClass.cpp でMyClass2 をインポート
+  - MyClass2.ixx ではMyClass をインポート
+  - MyClass からMyClass2::func() の呼び出しはリンク時に未解決の外部シンボルとしてエラーになる
+  - MyModule.cpp やmain.cpp でMyClass, MyClass2 をインポートするとMyClass::call_func() にMyClass2 のインスタンスを渡して呼び出すのが型の不一致のエラーとなる
+    - MyClass.ixx でのMyClass2 の前方宣言とMyClass2.ixx のMyClass2 の定義が別扱いになっている?
+  

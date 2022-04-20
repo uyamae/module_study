@@ -1,5 +1,6 @@
 ﻿import MyModule;
 //import MyModlue:Partition; // NG: C2143
+import MyClass2;
 
 int main()
 {
@@ -15,6 +16,13 @@ int main()
     //mm::privatePartialFunc5(); // NG: C2039, C3861 識別子が見つからない
     mm::publicFunc2();
     //mm::privateFunc2(); // NG: C2039, C3861 識別子が見つからない
+
+    mc::MyClass c;
+    mc::MyClass2 c2;
+    c.func();
+    //c.call_func(&c2); // NG: C2664 引数をmc::MyClass2 * からmc::MyClass2 * に変換できない
+    c2.func();
+    c2.call_func(&c);
 
     return 0;
 }
