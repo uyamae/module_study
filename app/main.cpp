@@ -1,6 +1,7 @@
 ﻿import MyModule;
 //import MyModlue:Partition; // NG: C2143
 import MyClass2;
+import MyClass3;
 
 int main()
 {
@@ -23,6 +24,11 @@ int main()
     //c.call_func(&c2); // NG: C2664 引数をmc::MyClass2 * からmc::MyClass2 * に変換できない
     c2.func();
     c2.call_func(&c);
+
+    mc::MyClass3 c3;
+    c3.func();
+    c3.call_func(&c);
+    c.call_func(&c3);
 
     return 0;
 }

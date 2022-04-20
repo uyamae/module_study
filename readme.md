@@ -61,4 +61,9 @@ C++ のモジュールについてテストして調べるプロジェクトで�
   - MyClass からMyClass2::func() の呼び出しはリンク時に未解決の外部シンボルとしてエラーになる
   - MyModule.cpp やmain.cpp でMyClass, MyClass2 をインポートするとMyClass::call_func() にMyClass2 のインスタンスを渡して呼び出すのが型の不一致のエラーとなる
     - MyClass.ixx でのMyClass2 の前方宣言とMyClass2.ixx のMyClass2 の定義が別扱いになっている?
-  
+- MyClass3
+  - MyClass と相互参照するクラス
+  - MyClass.ixx ではMyClass3 をexport 付き前方宣言, MyClass.cpp でMyClass3 をインポート
+  - MyClass3.ixx ではMyClass をインポート
+  - MyClass::call_func(MyClass3 *) は問題なくコンパイル、リンク出来る
+  - クラスの前方宣言にはexport が必要

@@ -6,6 +6,7 @@ module;
 #include <iostream>
 module MyClass;
 import MyClass2;
+import MyClass3;
 
 namespace mc {
 
@@ -17,6 +18,11 @@ void MyClass::func()
 void MyClass::call_func(MyClass2 * p)
 {
     //p->func(); // NG: LNK2019 未解決の外部シンボル
+}
+// MyClass3 を利用する関数
+void MyClass::call_func(MyClass3 * p)
+{
+    p->func(); // NG: LNK2019 未解決の外部シンボル
 }
 
 } // namespace mc
