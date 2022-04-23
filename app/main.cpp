@@ -2,6 +2,7 @@
 //import MyModlue:Partition; // NG: C2143
 import MyClass2;
 import MyClass3;
+import MyClass4;
 
 int main()
 {
@@ -29,6 +30,18 @@ int main()
     c3.func();
     c3.call_func(&c);
     c.call_func(&c3);
+
+    //mc::MyClass4 c4; // NG: C2079 未定義のclass mc::MyClass4
+    //c4.func(); // NG: C2027 認識できない型mc::MyClass4
+
+    //auto pc4 = mc::get_myclass4(); // NG: C2338 can't delete an incomplete type
+    //pc4->func(); // NG: C2039 func はpc4 のメンバーではない
+
+    mc::MyClass4b c4b;
+    c4b.func();
+
+    auto pc4b = mc::get_myclass4b();
+    pc4b->func();
 
     return 0;
 }

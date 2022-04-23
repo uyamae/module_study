@@ -67,3 +67,8 @@ C++ のモジュールについてテストして調べるプロジェクトで�
   - MyClass3.ixx ではMyClass をインポート
   - MyClass::call_func(MyClass3 *) は問題なくコンパイル、リンク出来る
   - クラスの前方宣言にはexport が必要
+- MyClass4, MyClass4b
+  - MyClass4 はMyClass4.ixx で宣言, MyClass4.cpp で定義
+  - MyClass4b はMyClass4.ixx で定義, MyClass4.cpp で関数定義
+  - MyClass4 はmain.cpp で利用できない
+  - MyClass4b はmain.cpp で利用できる
