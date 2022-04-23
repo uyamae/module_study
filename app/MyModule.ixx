@@ -3,6 +3,10 @@
  * @brief プライマリーモジュールインターフェース
  */
 export module MyModule;
+// プライマリーモジュールインターフェースはすべてのパーティションを
+// 再エクスポートしなければならない
+// https://www.slideshare.net/TetsuroMatsumura/c20-152189285
+// 15 of 30
 export import :Partition3;
 import :Partition4;
 export import :Partition5;
